@@ -1,0 +1,12 @@
+services:
+  mariadb:
+    image: mariadb:10.11.6
+    environment:
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: true
+      MYSQL_DATABASE: LittleLemon
+    ports: 
+      - '3306:3306'
+    volumes:
+      - 'mariadb-capstone:/var/lib/mysql'
+volumes:
+    mariadb-capstone: {}
